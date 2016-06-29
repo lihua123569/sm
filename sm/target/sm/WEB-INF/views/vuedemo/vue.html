@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+	<div id="app">
+		{{message}}
+		<input v-model="message"></input>
+	</div>
+	<div id="todo">
+		<ul>
+			<li v-for="todo in todos">
+				{{todo.text}}
+			</li>
+		</ul>
+	</div>
+	<div id="click">
+		{{message}}
+		<button v-on:click="reverseMessage">reverseMessage</button>
+	</div>
+	
+	<div id="all">
+		{{newTodo}}
+		<input v-model="newTodo" v-on:keyup.enter="addTodo"></input>
+		<ul>
+			<li v-for="todo in todos">
+				<span>{{todo.text}}</span>
+				<button v-on:click="removeTodo($index)">X</button>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="user">
+    <table>
+        <thead>
+        <tr>
+            <th style='width:3%; text-align: left'>ID</th>
+            <th style='width:5%; text-align: left'>名称</th>
+            <th style='width:10%; text-align: left'>条形码</th>
+            <th style='width:10%; text-align: left'>简称</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr v-for="goods in goodsList">
+                <td>{{goods.userid}}</td>
+                <td>{{goods.username}}</td>
+                <td>{{goods.phone}}</td>
+                <td>{{goods.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button v-on:click="nameSearch()">查询</button><br><br>
+</div>
+<br>
+<ul id="example-1">
+  <li v-for="(index,item) in items" track-by="_uid">
+    {{ item.message }} {{index}}
+  </li>
+</ul>
+
+<ul id="example-2" >
+  <template v-for="item in items">
+    <li>{{ item.message }}</li>
+    <li class="divider">{{$index}}</li>
+  </template>
+</ul>
+
+<ul id="repeat-object" class="demo">
+  <li v-for="value in object">
+    {{ $key }} : {{ value }}
+  </li>
+</ul>
+<div id="repeat-object2" v-for="(key, val) in object">
+  {{ key }} {{ val }}
+</div>
+
+
+<div id="example-3">
+<!--   	<span v-for="n in 10">{{ n }} </span> -->
+	<button v-on:click="say('hello!', $event)">Submit</button>
+</div>
+<br>
+
+<div id="app2">
+  <ul>
+    <li class="user" v-for="user in users" transition>
+      <span>{{user.name}} - {{user.email}}</span>
+      <button v-on:click="removeUser(user)">X</button>
+    </li>
+  </ul>
+  <form id="form" v-on:submit.prevent="addUser">
+    <input v-model="newUser.name">
+    <input v-model="newUser.email">
+    <input type="submit" value="Add User">
+  </form>
+  <ul class="errors">
+    <li v-show="!validation.name">Name cannot be empty.</li>
+    <li v-show="!validation.email">Please provide a valid email address.</li>
+  </ul>
+</div>
+
+<div id="shujubangding">
+	<div>
+		{{name}}
+		{{ number + 1 }}
+		{{ ok ? 'YES' : 'NO' }}
+		<br>
+	</div>
+	<input :value="name" />
+	<br>
+	<span v-text="message | wrap 'before-' '-after'"></span>
+	<br>
+	<input v-model="money |  currencyDisplay" />{{valid_value}}
+</div>
+<br>
+<br>
+
+<div id="regist">
+ 
+  <form id="form"  >
+    <input v-model="newUser.name">
+    <input v-model="newUser.email">
+    <input v-model="money | currencyDisplay">
+    <input v-model="phone | isPhone" maxlength="11"><span v-show="phone">手机号不正确</span><span v-show="phone==1">手机号不能为空</span>
+  </form>
+  <ul class="errors">
+    <li v-show="!validation.name">Name cannot be empty.</li>
+    <li v-show="!validation.email">Please provide a valid email address.</li>
+  </ul>
+</div>
+
+
+
+<h5>把手机号第4位到第7位替换成****</h5>
+<p>你的手机号是 13500112233<br />小猪的手机号是 136911887766 <br /> 大熊的手机号是 13810102222</p>
+<button>点我替换</button>
+<br>
+<br>
+
+
+
+</body>
+
+
+<link rel="stylesheet" type="text/css" href="/sm/inc/css/validform.css">
+<script type="text/javascript" src="/sm/inc/vue.js"></script>
+<script type="text/javascript" src="/sm/inc/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/sm/inc/Firebase.js"></script>
+<script type="text/javascript" src="/sm/inc/sm.core.js"></script>
+</html>

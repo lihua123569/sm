@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   -->
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>Bootstrap 101 Template</title>
+
+<link rel="stylesheet" type="text/css"
+	href="/sm/inc/wall/css/normalize.css" />
+<link rel="stylesheet" type="text/css"
+	href="/sm/inc/wall/css/default.css">
+<link rel="stylesheet" type="text/css"
+	href="/sm/inc/wall/css/styles.css">
+
+
+</head>
+<body>
+	<!--  <div class="article" id="article">
+	<div class="wall" > 
+		  <a class="article" href="#">
+		    <img src="/sm/inc/wall/img/1.jpg" />
+		    <h2>121221</h2>
+		  </a>  
+		   <div class="article">
+		    <img src="/sm/inc/wall/img/2.jpg" />
+		    <h2>Cursus cursus proin auctor in in ac, nunc, tortor</h2>
+		  </div>
+		  <div class="article">
+		    <img src="/sm/inc/wall/img/3.jpg" />
+		    <h2>Cursus cursus proin auctor in in ac, nunc, tortor</h2>
+		  </div>
+		  <div class="article">
+		    <img src="/sm/inc/wall/img/4.jpg" />
+		    <h2>Cursus cursus proin auctor in in ac, nunc, tortor</h2>
+		  </div>
+		  <div class="article">
+		    <img src="/sm/inc/wall/img/5.jpg" />
+		    <h2>Cursus cursus proin auctor in in ac, nunc, tortor</h2>
+		  </div>
+		  <div class="article">
+		    <img src="/sm/inc/wall/img/6.jpg" />
+		    <h2>Cursus cursus proin auctor in in ac, nunc, tortor</h2>
+		  </div>
+ 
+		</div>
+	</div>    -->
+	<button onclick="walls()" >加载walls</button>
+	<div class="article" id="article" >
+		<div class="wall" id="arti"  transition="my-transition">
+			<div class="article"  v-for="goods in goodsList">
+				<img v-bind:src=goods.url />
+				<h2>{{goods.title}}</h2>
+			</div>
+		</div>
+
+	</div>
+	
+	
+	<div id="mount-point"></div>
+	
+	
+	
+	
+	<!--   <script src="/sm/inc/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="/sm/inc/vue.js"></script>
+	<script type="text/javascript" src="/sm/inc/wall.js"></script>
+	<script type="text/javascript" src="/sm/inc/wall/js/jaliswall.js"></script>
+  -->
+   <script type="text/javascript" data-main="/sm/inc/main/smwall" src="/sm/inc/require.js"></script>
+  
+	<!-- <script type="text/javascript">
+      var  tests = "我是代码块一变量";
+      console.log(str);//因为没有定义str，所以浏览器会出错，下面的不能运行
+      console.log("我是代码块一");//没有运行到这里
+</script>
+<script type="text/javascript">
+       console.log("我是代码块二"); //这里有运行到
+       console.log(tests); //弹出"我是代码块一变量"
+</script>
+
+<script type="text/javascript">
+     Fn();  //执行结果："执行了函数2",同名函数后者会覆盖前者
+     function Fn(){ //函数1
+    	 console.log("执行了函数1");
+     }
+         
+     function Fn(){  //函数2
+    	 console.log("执行了函数2");
+     }
+</script>
+
+<script type="text/javascript">
+      Fn();  //执行结果："执行了声明式函数",在预编译期声明函数及被处理了，所以即使Fn()调用函数放在声明函数前也能执行。
+      function Fn(){ //声明式函数
+    	  console.log("执行了声明式函数");
+      }
+         
+      var Fn = function(){  //赋值式函数
+    	  console.log("执行了赋值式函数");
+      }
+</script>
+<script type="text/javascript">
+      Fn1();  //浏览器报错:"undefined"
+</script>
+<script type="text/javascript">
+      function Fn1(){ //函数1
+    	  console.log("执行了函数1");
+      }
+      Fn1();
+      
+      console.log(screen.availHeight);
+      
+      document.write("Screen resolution: ")
+      document.write(screen.width + "*" + screen.height)
+      
+</script> -->
+
+	<!-- <script type="text/javascript">
+function hello(){
+
+	console.log('hello,zhangsan');
+
+	}
+
+	hello();//第一次调用，猜猜输出什么内容？
+
+	function hello(){
+
+		console.log('hello,lisi');
+
+	}
+
+	hello();
+	
+	 t = 12;//局部变量
+	str=11;
+	function con(){
+		
+	    console.log(ts);
+	    console.log(t);
+	    console.log(str);
+	    var str = 1111;
+	    var t = 2;
+	    console.log(t);
+	}
+	con();
+	
+</script> -->
+
+</body>
+</html>

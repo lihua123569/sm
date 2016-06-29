@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>user:用户</title>
+<link href="/sm/inc/bootstrap-3.3.5-dist/css/bootstrap.min.css"	rel="stylesheet">
+<style type="text/css">
+	.table thead tr th{
+		width:25%;
+	}
+</style>
+</head>
+<body>
+
+<div id="user" class="container-fluid">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Userid</th>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>性别</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr v-for="goods in goodsList">
+                <td>{{goods.userid}}</td>
+                <td>{{goods.username}}</td>
+                <td>{{goods.phone}}</td>
+                <td>{{goods.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <button v-on:click="nameSearch()">查询</button><br><br> -->
+</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="/sm/inc/jquery-1.11.3.js"></script>
+	<script src="/sm/inc/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<!--bootstrap formValidation import js -->
+	<script src="/sm/inc/bootstrap-validform/js/formValidation.js"></script>
+	<script src="/sm/inc/bootstrap-validform/js/framework/bootstrap.js"></script>
+	<link href="/sm/inc/bootstrap-validform/css/formValidation.css"	rel="stylesheet">
+	<!-- login valideform -->
+	<script src="/sm/inc/formValidation.js""></script>	
+	<link href="/sm/inc/css/common.css"	rel="stylesheet">
+	<script type="text/javascript" src="/sm/inc/vue.js"></script>
+	<!-- <script type="text/javascript" src="/sm/inc/user.js"></script> -->
+	
+<script type="text/javascript" src="/sm/inc/user.js"></script> 
+</body>
+</html>

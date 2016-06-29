@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!--   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   -->  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/sm/inc/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .container-fluid{
+    	border:1px solid red;
+    }
+    .container{
+    	border:1px solid blue;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>你好，世界！</h1>
+	<br />
+    <div class="container">
+		Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器。我们提供了两个作此用处的类。注意，由于 padding 等属性的原因，这两种 容器类不能互相嵌套。
+		.container 类用于固定宽度并支持响应式布局的容器。
+	</div>
+	<br />
+   <div class="container-fluid">
+    	<strong>input  type="email" type 有很多去挖掘</strong>
+    	<strong>常用工具类</strong>
+      	<p class="lead">
+		.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。
+		</p>
+	</div>
+	<br />
+    <div class="container">
+
+    <ins>This line of text is meant to be treated as an addition to the document.</ins>
+	<br />
+	<s>This line of text is meant to be treated as no longer accurate.</s>
+	<br />
+    <u>This line of text will render as underlined</u>
+	<br />
+
+    <p class="lead text-left">
+		Vivamus sagittis <mark>highlight</mark>lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+	</p>
+    <p class="text-right">
+		Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+	</p>
+
+	<del>This line of text is meant to be treated as deleted text.</del>
+	<br />
+	<small>This line of text is meant to be treated as fine print.</small>
+	<br />
+	<strong>rendered as bold text</strong>
+	<br />
+	<em>rendered as italicized text</em>
+	<br />
+	<br />
+	<br />
+	<br />
+	</div>
+	<div class="container">
+		<p class="text-left">Left aligned text.</p>
+		<p class="text-center">Center aligned text.</p>
+		<p class="text-right">Right aligned text.</p>
+		<p class="text-justify">Justified text.</p>
+		<p class="text-nowrap">No wrap text.</p>
+		
+	</div>
+    <div class="container">
+		<p class="text-lowercase">Lowercased text. 小写</p>
+		<p class="text-uppercase">Uppercased text. 大写</p>
+		<p class="text-capitalize">Capitalized text hello world! 首字母大写</p>
+	</div>
+    <div class="container">
+    	<abbr title="attribute变成">attr</abbr>
+    	<br />
+    	<abbr title="attribute ad   ada  asdfa  a变成" >attr</abbr>
+    	<br />
+    	<abbr title="attribute ad   ada  asdfa  a变成" class="initialism">attr 变成大写，显示出来的略小</abbr>
+    	<br>
+    	<a href="mailto:#">first.last@example.com</a>
+    	
+    	<blockquote>引用来源：
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			 <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+		</blockquote>
+    	<blockquote class="blockquote-reverse">引用来源：
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			 <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+		</blockquote>
+    </div>
+    <div class="container ">
+    	<ul>
+		  <li>...</li>
+		  <li>...</li>
+		  <li>...</li>
+		</ul>
+		<br>
+    	<ul class="list-unstyled">
+		  <li>...</li>
+		  <li>
+				<ul>
+					<li>---</li>
+					<li>---</li>
+				</ul>
+		  </li>
+		  <li>...</li>
+		</ul>
+		<br>
+		<ul class="list-inline">
+		  <li>.1.</li>
+		  <li>.2.</li>
+		  <li>.3.</li>
+		</ul>
+    </div>
+    <div class="container ">
+    	<dl>
+	      <dt>Description lists</dt>
+	      <dd>A description list is perfect for defining terms.</dd>
+	      <dt>Euismod</dt>
+	      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+	      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+	      <dt>Malesuada porta</dt>
+	      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+	      <dt>Felis euismod semper eget lacinia</dt>
+	      <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.8888888888888888888888888888888888888888888888888888888</dd>
+	    </dl>
+	    <br>
+    	<dl class="dl-horizontal">
+	      <dt>Description lists</dt>
+	      <dd>A description list is perfect for defining terms.</dd>
+	      <dt>Euismod</dt>
+	      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+	      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+	      <dt>Malesuada porta</dt>
+	      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+	      <dt>Felis euismod semper eget lacinia</dt>
+	      <dd  class="text-overflow">
+	      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+	      </dd>
+	    </dl>
+    </div>
+    <div class="container">
+   		asdfasdfasdfadfasdffasd<kbd>cd</kbd><kbd>enter</kbd>fasdfaasdfasdfasdfaasdfasasdfasdasdfasdfasdfsasdfasdfasdfaasdfasasdfasdasdfasdfasdfsasdfasdfasdfaasdfasasdfasdasdfasdfasdfs
+   		asdfasdfasdfaasdfasasdfasdasdfasdfasdfsasdfasdfasdfaasdfasasdfasdasdfasdfasdfsasdfasdfasdfaasdfasasdfasdasdfasdfasdfsasdfasdfasdfaasdfasasdfasdasdfasdfasdfs
+   		asdfasdfasdfaasddfasdf
+   		asdfasdfasdfafas
+   		asdfasdfasdfa
+   		<samp>This text is meant to be treated as sample output from a computer program.</samp>
+    </div>
+   
+    <div class="container">
+    	<div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <div class="container" >
+    	 <form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> Check me out
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+    </div>
+    <div class="container" >
+    <strong>上下的区别是form  class="form-inline" </strong>
+    	 <form class="form-inline">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		    <label>--</label><input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> Check me out
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+    </div>
+	<div class="container">
+		<form class="form-horizontal">
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+		    <div class="col-sm-3">
+		      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+		    </div>
+		    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+		    <div class="col-sm-3">
+		      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+		    <div class="col-sm-3">
+		      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		          <input type="checkbox"> Remember me
+		        </label>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-default">Sign in</button>
+		    </div>
+		  </div>
+		</form>
+	</div>
+	
+	<form class="form-inline">
+   <div class="container-fluid  text-center">
+   		<div class="row">
+   			<div class="col-sm-4">
+	   			<div class="form-group">
+	   				<lable>订单号</lable>
+	   				<input type="text" name="orderid" class="form-control" />
+   				</div>
+   			</div>
+   		</div>
+   		<div class="row">
+   			<div class="col-sm-4">
+	   			<div class="form-group">
+   				<lable>订单号</lable>
+   				<input type="text" name="orderid" class="form-control" />
+   			</div>
+   			</div>
+	   		<div class="col-sm-4">
+	   			<div class="form-group">
+   				<lable>订单号</lable>
+   				<input type="text" name="orderid" class="form-control" />
+   			</div>
+   			</div>
+   		</div>
+   </div>
+   </form>
+   <div class="container">
+		<div class="   has-feedback">
+		  <label class="control-label"  >Input with success</label>
+		  <input type="text" class="form-control"  >
+		  <span class="glyphicon glyphicon-ok form-control-feedback"  ></span>
+		</div>
+		<div class="form-group has-warning has-feedback">
+		  <label class="control-label" for="inputWarning2">Input with warning</label>
+		  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+		  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+		</div>
+		<div class="form-group has-error has-feedback">
+		  <label class="control-label" for="inputError2">Input with error</label>
+		  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+		  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputError2Status" class="sr-only">(error)</span>
+		</div>
+		<div class="form-group has-success has-feedback">
+		  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+		  <div class="input-group">
+		    <span class="input-group-addon">@</span>
+		    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+		  </div>
+		  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+		</div>
+	</div>
+	
+	  
+	
+	
+	 <table class="table table-hover table-condensed">
+      <thead>
+        <tr>
+          <th style="width:60px;">勾选</th>
+          <th>订单号</th>
+          <th>订单创建时间</th>
+          <th>交易类型</th>
+          <th>买家</th>
+          <th>买家手机号</th>
+          <th>卖家</th>
+          <th>卖家手机号</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+         
+         <tr><td colspan="9" style="background-color: #C0D5B5;">暂无数据</td></tr>
+         
+           
+	         <tr>
+	          <th scope="row" align="center" style="text-align: center;"><input type="checkbox" aria-label="..." value="1"></th>
+	          <td>sss</td>
+	          <td>啊实打实的</td>
+	          <td>
+	         拍卖 
+	         </td>
+	          <td>ddd</td>
+	          <td>dddd</td>
+	          <td>ddddddd</td>
+	          <td>ddddddd</td>
+	          <td>
+	             部分完成 
+	           </td>
+	          <td>
+	          	<button class="btn"  >详情</button></td>
+	        </tr>
+		 
+      </tbody>
+    </table> 
+    
+    <div class="container-fluid center-block" style="width:100%;">
+    	<div class="row">
+    		<div class="col-sm-2">col-sm-2</div>
+    		<div class="col-sm-2">col-sm-2</div>
+    		<div class="col-sm-2">col-sm-2</div>
+    		<div class="col-sm-6">col-sm-6</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-sm-3">col-sm-3</div>
+    		<div class="col-sm-2">col-sm-2</div>
+    		<div class="col-sm-4">col-sm-4</div>
+    		<div class="col-sm-3">col-sm-4</div>
+    	</div>
+    </div>
+    <div class="container-fluid text-center" >
+    	<div class="row">
+    		<div class="col-xs-2">col-xs-2</div>
+    		<div class="col-xs-2">col-xs-2</div>
+    		<div class="col-xs-2">col-xs-2</div>
+    		<div class="col-xs-6">col-xs-6</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-xs-3">col-xs-3</div>
+    		<div class="col-xs-2">col-xs-2</div>
+    		<div class="col-xs-4">col-xs-4</div>
+    		<div class="col-xs-3">col-xs-3</div>
+    	</div>
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/sm/inc/jquery-1.11.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/sm/inc/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    
+    
+    
+  </body>
+</html>

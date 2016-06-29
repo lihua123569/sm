@@ -1,0 +1,1 @@
+var list,goodsVue=new Vue({el:"#user",data:{goodsList:[]}});$.ajax({type:"POST",url:"/sm/user/queryUserList.html",success:function(data){var data=eval("("+data+")");console.log(data),goodsVue.goodsList=data.userList,console.log(list)}});

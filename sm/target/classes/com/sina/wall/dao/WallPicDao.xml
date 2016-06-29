@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sina.wall.dao.WallPicDao">
+    <resultMap id="resultEntity" type="com.sina.wall.model.WallPic">
+        <id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="column_List">
+    	<![CDATA[
+        id,url,title
+        ]]>
+    </sql>
+     <sql id="Entity_Where_Clause">
+        <where>
+          <trim prefix="(" suffix=")" prefixOverrides="and">
+             <if test="id != null and  id != ''   ">
+                and id=#{id,jdbcType=VARCHAR}
+            </if>
+			<if test="url != null and  url != ''  ">
+               and  url=#{url,jdbcType=VARCHAR}
+           	</if>
+			<if test="title != null and  title != ''  ">
+               and  title=#{title,jdbcType=VARCHAR}
+           	</if>
+          </trim>
+        </where>
+    </sql>
+  
+    <select id="selectByPrimaryKey" resultMap="resultEntity" parameterType="java.lang.String">
+        select
+        <include refid="column_List" />
+        from WALL_PIC
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <select id="selectByEntityWhere" resultMap="resultEntity" parameterType="com.sina.wall.model.WallPic">
+        select
+        <include refid="column_List" />
+        from WALL_PIC
+        <include refid="Entity_Where_Clause" />
+    </select>
+    <select id="selectByMapWhere" resultMap="resultEntity" parameterType="java.util.Map">
+        select
+        <include refid="column_List" />
+        from WALL_PIC
+        <include refid="Entity_Where_Clause" />
+        <if test="orderCondition != null and orderCondition != ''" >
+	     order by ${orderCondition}
+	    </if>
+	    <if test="queryCondition != null and queryCondition != ''" >
+	      ${queryCondition}
+	    </if>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    	<![CDATA[
+        delete from WALL_PIC
+        where id = #{id,jdbcType=VARCHAR}
+        ]]>
+    </delete>
+	<delete id="batchDeleteByIds" parameterType="java.lang.String">
+		delete FROM WALL_PIC where guid in
+			<foreach item="idItem" collection="array" open="(" separator="," close=")">
+			#{idItem}
+			</foreach>
+	</delete>
+    <insert id="insert" parameterType="com.sina.wall.model.WallPic">
+    	<!--
+    	<selectKey keyProperty="id" resultType="String" order="BEFORE">  
+            select replace(uuid(), '-', '')
+        </selectKey>  
+        -->
+        <![CDATA[
+        insert into WALL_PIC (id,url,title)
+        values (
+        	#{id,jdbcType=VARCHAR}
+        	,#{url,jdbcType=VARCHAR},#{title,jdbcType=VARCHAR}
+        	)
+       ]]>
+    </insert>
+    <insert id="insertSelective" parameterType="com.sina.wall.model.WallPic">
+    	<!--
+    	<selectKey keyProperty="id" resultType="String" order="BEFORE"> 
+	        select replace(uuid(), '-', '')
+        </selectKey>
+        -->  
+         insert into WALL_PIC
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null and  id != ''   ">
+                id,
+            </if>
+			<if test="url != null and  url != ''  ">
+               url,
+           	</if>
+			<if test="title != null and  title != ''  ">
+               title,
+           	</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+        	<if test="id != null and  id != ''  ">
+                #{id,jdbcType=VARCHAR},
+            </if>
+			<if test="url != null and  url != ''  ">
+                #{url,jdbcType=VARCHAR},
+           	</if>
+			<if test="title != null and  title != ''  ">
+                #{title,jdbcType=VARCHAR},
+           	</if>
+        </trim>
+    </insert>
+   <update id="updateByIdSelective" parameterType="com.sina.wall.model.WallPic">
+        update WALL_PIC
+        <set>
+			<if test="url != null and  url != ''  ">
+                url=#{url,jdbcType=VARCHAR},
+           	</if>
+			<if test="title != null and  title != ''  ">
+                title=#{title,jdbcType=VARCHAR},
+           	</if>
+        </set>
+        where  id= #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.sina.wall.model.WallPic">
+        update WALL_PIC
+        set 
+        		url=#{url,jdbcType=VARCHAR}
+        		,title=#{title,jdbcType=VARCHAR}
+        where  id= #{id,jdbcType=VARCHAR}
+    </update>
+    <!-- 
+   	 附加信息，便于自己写sql语句
+    id= #{id,jdbcType=VARCHAR}
+	url=#{url,jdbcType=VARCHAR}
+	title=#{title,jdbcType=VARCHAR}
+     -->
+     
+</mapper>

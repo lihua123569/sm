@@ -1,0 +1,11 @@
+.container-fluid {
+	border: 1px solid red;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.container {
+	word-wrap: break-word;
+	word-break: break-all;
+	/* border: 1px solid blue; */
+}
